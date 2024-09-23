@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint.js</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #222;
+            padding: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fce300;
+            font-size: 12px;
+            font-weight: 600;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            img {
+                width: 16px;
+                height: auto;
+            }
+        }
+
+        canvas {
+            background: #fff;
+        }
+
+        header {
+            grid-area: header;
+
+            background: silver;
+            padding: 2px;
+
+            button {
+                border: 0;
+                background: transparent;
+
+                &:hover {
+                    box-shadow: 1px 1px black, inset -1px -1px gray, inset 1px 1px white;
+                }
+            }
+        }
+
+        main {
+            grid-area: main;
+            padding: 16px;
+        }
+
+        footer {
+            grid-area: footer;
+
+            background: silver;
+            padding: 4px;
+        }
+
+        #container {
+            border: 1px solid #808080;
+            display: grid;
+            grid-template-areas:
+            "header header header"
+            "aside main main"
+            "footer footer footer";
+        }
+
+        aside {
+            grid-area: aside;
+
+            background: silver;
+            width: 52px;
+            padding-top: 2px;
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1px;
+                justify-content: center;
+            }
+
+            button {
+                width: 24px;
+                height: 24px;
+
+                background-color: #bdbdbd;
+                background-image: url("./icons/draw.png");
+                background-repeat: no-repeat;
+                background-position: center;
+
+                border: 1.5px solid #eee;
+                border-right-color: #000;
+                border-bottom-color: #000;
+
+                image-rendering: pixelated;
+
+                &.active {
+                    border-color: #000;
+                    border-right-color: #eee;
+                    border-bottom-color: #eee;
+                }
+                &[disabled] {
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        #erase-btn {
+            background-image: url("./icons/erase.png");
+        }
+
+        #rectangle-btn {
+            background-image: url("./icons/rectangle.png");
+        }
+        #ellipse-btn {
+            background-image: url("./icons/ellipse.png");
+        }
+        #picker-btn {
+            background-image: url("./icons/picker.png");
+            /* display: none; */
+        }
+
+        #clear-btn {
+            background-image: url("./icons/trash.png");
+            background-size: 18px;
+        }
+    </style>
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <h1>
+        <img src="./icon.png" alt="paint.js" srcset="">
+        P
+    </h1>
+    <div id="container">
+        <header>
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Image</button>
+            <button>Options</button>
+            <button>Help</button>
+        </header>
+
+        <aside>
+            <nav>
+                <button id="draw-btn" title="Pincel" class="active"></button>
+                <button id="erase-btn" title="Borrar"></button>
+                <button id="rectangle-btn" title="Rectángulo"></button>
+                <button id="ellipse-btn" title="Elipse"></button>
+                <button disabled id="picker-btn" title="Capturar Color"></button>
+                <button id="clear-btn" title="Limpiar dibujo"></button>
+            </nav>
+        </aside>
+
+        <main>
+            <canvas id="canvas" width="300" height="300"></canvas>
+        </main>
+
+        <footer>
+            <input type="color" id="color-picker">
+        </footer>
+    </div>
+</body>
+
+</html>
