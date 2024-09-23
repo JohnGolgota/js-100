@@ -1,0 +1,60 @@
+Krookodile (F) @ Choice Band  
+Ability: Moxie  
+Level: 50  
+EVs: 252 Atk / 4 SpD / 252 Spe  
+Jolly Nature  
+- Earthquake  
+- Dragon Claw  
+- Crunch  
+- Aerial Ace  
+
+Lucario (F) @ Choice Specs  
+Ability: Steadfast  
+Level: 50  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+- Flash Cannon  
+- Calm Mind  
+- Shadow Ball  
+- Aura Sphere  
+
+Magnezone @ Expert Belt  
+Ability: Analytic  
+Level: 50  
+EVs: 252 HP / 252 SpA / 4 SpD  
+Modest Nature  
+- Discharge  
+- Flash Cannon  
+- Signal Beam  
+- Rest  
+
+Flygon @ Sharp Beak  
+Ability: Levitate  
+Level: 50  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Timid Nature  
+- Sandstorm  
+- Dragon Pulse  
+- Flamethrower  
+- Protect  
+
+Golurk @ Sitrus Berry  
+Ability: Iron Fist  
+Level: 50  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Fire Punch  
+- Thunder Punch  
+- Shadow Punch  
+- Ice Punch  
+
+Seismitoad @ Smooth Rock  
+Ability: Swift Swim  
+Level: 50  
+EVs: 252 SpA / 4 SpD / 252 Spe  
+Modest Nature  
+- Muddy Water  
+- Scald  
+- Earth Power  
+- Toxic  
+
