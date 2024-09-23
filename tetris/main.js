@@ -33,8 +33,24 @@ const pieces = [
 ]
 
 // Game loop
+let dropCounter = 0
+let lastTime = 0
+function update(time = 0) {
+    const deltaTime = time - lastTime
+    lastTime = time
 
-function update() {
+    dropCounter += deltaTime
+
+    if (dropCounter > 1000) {
+        pieces[0].position.y++
+        dropCounter = 0
+        if (checkCollision(pieces[0])) {
+            pieces[0].position.y--
+            solidifyPiece(pieces[0])
+            removePiece()
+        }
+    }
+
     draw()
     window.requestAnimationFrame(update)
 }
