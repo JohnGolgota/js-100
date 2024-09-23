@@ -42,7 +42,7 @@ const PIECES = [
   [
     [1, 0, 0],
     [1, 1, 1]
-  ],
+  ]
 ]
 
 const piece = {
@@ -53,7 +53,7 @@ const piece = {
 // Game loop
 let dropCounter = 0
 let lastTime = 0
-function update(time = 0) {
+function update (time = 0) {
   const deltaTime = time - lastTime
   lastTime = time
 
@@ -73,7 +73,7 @@ function update(time = 0) {
   window.requestAnimationFrame(update)
 }
 
-function draw() {
+function draw () {
   ctx.fillStyle = '#000'
   ctx.fillRect(0, 0, $canvas.width, $canvas.height)
 
@@ -135,18 +135,18 @@ document.addEventListener('keydown', (e) => {
   }
 })
 
-function checkCollision(piece) {
+function checkCollision (piece) {
   return piece.shape.find((row, y) => {
     return row.find((block, x) => {
       return (
-        block != 0 &&
-        board[piece.position.y + y]?.[piece.position.x + x] != 0
+        block !== 0 &&
+        board[piece.position.y + y]?.[piece.position.x + x] !== 0
       )
     })
   })
 }
 
-function solidifyPiece(piece) {
+function solidifyPiece (piece) {
   piece.shape.forEach((row, y) => {
     row.forEach((block, x) => {
       if (block) {
@@ -166,10 +166,11 @@ function solidifyPiece(piece) {
   }
 }
 
-function removePiece(piece) {
+function removePiece (piece) {
   const rowToRemove = []
+
   board.forEach((row, y) => {
-    if (row.every(block => block == 1)) {
+    if (row.every(block => block === 1)) {
       rowToRemove.push(y)
     }
   })
@@ -183,4 +184,3 @@ function removePiece(piece) {
 }
 
 update()
-
