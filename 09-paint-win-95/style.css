@@ -1,0 +1,134 @@
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     background: #222;
+     padding: 16px;
+     max-width: 500px;
+     margin: 0 auto;
+ }
+
+ h1 {
+     color: #fce300;
+     font-size: 12px;
+     font-weight: 600;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 4px;
+
+     img {
+         width: 16px;
+         height: auto;
+     }
+ }
+
+ canvas {
+     background: #fff;
+ }
+
+ header {
+     grid-area: header;
+
+     background: silver;
+     padding: 2px;
+
+     button {
+         border: 0;
+         background: transparent;
+
+         &:hover {
+             box-shadow: 1px 1px black, inset -1px -1px gray, inset 1px 1px white;
+         }
+     }
+ }
+
+ main {
+     grid-area: main;
+     padding: 16px;
+ }
+
+ footer {
+     grid-area: footer;
+
+     background: silver;
+     padding: 4px;
+ }
+
+ #container {
+     border: 1px solid #808080;
+     display: grid;
+     grid-template-areas:
+         "header header header"
+         "aside main main"
+         "footer footer footer";
+ }
+
+ aside {
+     grid-area: aside;
+
+     background: silver;
+     width: 52px;
+     padding-top: 2px;
+
+     nav {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1px;
+         justify-content: center;
+     }
+
+     button {
+         width: 24px;
+         height: 24px;
+
+         background-color: #bdbdbd;
+         background-image: url("./icons/draw.png");
+         background-repeat: no-repeat;
+         background-position: center;
+
+         border: 1.5px solid #eee;
+         border-right-color: #000;
+         border-bottom-color: #000;
+
+         image-rendering: pixelated;
+
+         &.active {
+             border-color: #000;
+             border-right-color: #eee;
+             border-bottom-color: #eee;
+         }
+
+         &[disabled] {
+             pointer-events: none;
+             opacity: 0.5;
+         }
+     }
+ }
+
+ #erase-btn {
+     background-image: url("./icons/erase.png");
+ }
+
+ #rectangle-btn {
+     background-image: url("./icons/rectangle.png");
+ }
+
+ #ellipse-btn {
+     background-image: url("./icons/ellipse.png");
+ }
+
+ #picker-btn {
+     background-image: url("./icons/picker.png");
+     /* display: none; */
+ }
+
+ #clear-btn {
+     background-image: url("./icons/trash.png");
+     background-size: 18px;
+ }
