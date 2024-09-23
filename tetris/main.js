@@ -1,6 +1,7 @@
 import './style.css'
 
 const $canvas = document.querySelector('canvas')
+const $score = document.getElementById('score')
 
 const ctx = $canvas.getContext('2d')
 
@@ -8,19 +9,15 @@ const BLOCK_SIZE = 20
 const BOARD_WIDTH = 10
 const BOARD_HEIGHT = 20
 
+let score = 0
+
 $canvas.width = BLOCK_SIZE * BOARD_WIDTH
 $canvas.height = BLOCK_SIZE * BOARD_HEIGHT
 
 ctx.scale(BLOCK_SIZE, BLOCK_SIZE)
 
 // Board manipulation
-const board = []
-for (let i = 0; i < BOARD_HEIGHT; i++) {
-  board[i] = []
-  for (let j = 0; j < BOARD_WIDTH; j++) {
-    board[i][j] = 0
-  }
-}
+const board = Array(BOARD_HEIGHT).fill(Array(BOARD_WIDTH).fill(0))
 
 const PIECES = [
   [
@@ -97,6 +94,7 @@ function draw() {
       }
     })
   })
+  $score.innerHTML = score
 }
 
 document.addEventListener('keydown', (e) => {
@@ -180,6 +178,7 @@ function removePiece(piece) {
     board.splice(y, 1)
     const newRow = Array(BOARD_WIDTH).fill(0)
     board.unshift(newRow)
+    score += 10
   })
 }
 
