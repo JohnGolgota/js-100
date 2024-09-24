@@ -1,5 +1,3 @@
-import './style.css'
-
 const $canvas = document.querySelector('canvas')
 const $score = document.getElementById('score')
 
