@@ -5,7 +5,7 @@ const projects = [
     tags: ['Canvas', 'Game', 'Eventos de teclado', 'Lógica'],
     links: [
       { name: 'GitHub', url: 'https://github.com/JohnGolgota/js-100' },
-      { name: 'Demo', url: '/06-tetris-canvas/' }
+      { name: 'Demo', url: './06-tetris-canvas/' }
     ]
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     tags: ['Canvas', 'Grid Area', 'EyeDropper API'],
     links: [
       { name: 'GitHub', url: 'https://github.com/JohnGolgota/js-100' },
-      { name: 'Demo', url: '/09-paint-win-95/' }
+      { name: 'Demo', url: './09-paint-win-95/' }
     ]
   }
 ]
