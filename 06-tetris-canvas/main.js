@@ -15,7 +15,7 @@ $canvas.height = BLOCK_SIZE * BOARD_HEIGHT
 ctx.scale(BLOCK_SIZE, BLOCK_SIZE)
 
 // Board manipulation
-const board = Array(BOARD_HEIGHT).fill(Array(BOARD_WIDTH).fill(0))
+const board = Array(BOARD_HEIGHT).fill().map(() => Array(BOARD_WIDTH).fill(0))
 
 const PIECES = [
   [
