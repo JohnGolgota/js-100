@@ -19,8 +19,8 @@ const projects = [
   },
   {
     name: 'Excel.js',
-    description: 'Crea un editor de imágenes clásico con canvas',
-    tags: ['Canvas', 'Grid Area', 'EyeDropper API'],
+    description: 'Hojas de cálculo con JavaScript',
+    tags: ['Tablas', 'Eventos de input y blur', 'Eval'],
     links: [
       { name: 'GitHub', url: 'https://github.com/JohnGolgota/js-100' },
       { name: 'Demo', url: './08-excel/' }
