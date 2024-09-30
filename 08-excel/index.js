@@ -101,6 +101,7 @@ $tbody.addEventListener('click', e => {
   if (!$td) return
 
   $$('.selected').forEach(el => el.classList.remove('selected'))
+  selectedColumn = null
 
   const { x, y } = $td.dataset
   const $input = $td.querySelector('input')
@@ -145,6 +146,15 @@ document.addEventListener('keydown', e => {
       updateCell({ x: selectedColumn, y: row, value: '' })
     })
     renderSpreadSheet()
+  }
+})
+
+document.addEventListener('copy', e => {
+  if (selectedColumn !== null) {
+    const columnValues = range(ROWS).map(row => STATE[selectedColumn][row].computedValue)
+
+    e.clipboardData.setData('text/plain', columnValues.join('\n'))
+    e.preventDefault()
   }
 })
 
