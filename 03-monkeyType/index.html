@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+
+    const time = document.querySelector('time')
+    const p = document.querySelector('p')
+    const input = document.querySelector('input')
+
+    const TEXT = "lorem"
+
+    const INITIAL_TIME = 30
+
+    let words = []
+    let currentTiem = INITIAL_TIME
+    function initGame() {
+      let words = TEXT.split(' ').slice(0, 32)
+      let currentTiem = INITIAL_TIME
+
+      time.textContent = currentTiem
+    }
+    function initEvents() {
+
+    }
+  </script>
+</head>
+
+<body>
+
+  <main>
+    <section id="game">
+      <time></time>
+      <p></p>
+      <input type="text" autofocus>
+    </section>
+  </main>
+
+  <style scoped>
+  </style>
+</body>
+
+</html>

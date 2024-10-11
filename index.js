@@ -25,6 +25,20 @@ const projects = [
       { name: 'GitHub', url: 'https://github.com/JohnGolgota/js-100' },
       { name: 'Demo', url: './08-excel/' }
     ]
+  },
+  {
+    name: 'Reto de Mecanografía',
+    description: 'Pon a prueba tus habilidades de mecanografía con este reto',
+    tags: [
+      'DOM',
+      'Eventos de teclado',
+      'Manejo de clases',
+      'Optimización selectores'
+    ],
+    links: [
+      { name: 'GitHub', url: 'https://github.com/JohnGolgota/js-100' },
+      { name: 'Demo', url: './03-monkeyType/' }
+    ]
   }
 ]
 
